@@ -15,9 +15,9 @@ public class Practice14062022 {
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length - 1 - i; j++) {
-                if (a[j] < a[i]) {
-                    int temp = a[i];
-                    a[i] = a[j];
+                if (a[j] < a[j + 1]) {
+                    int temp = a[j + 1];
+                    a[j + 1] = a[j];
                     a[j] = temp;
                 }
             }
@@ -110,11 +110,11 @@ public class Practice14062022 {
     void nextSmallerElement() {
         int[] a = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
         Stack<Integer> stack = new Stack<>();
-        for(int i=a.length-1;i>=0;i--) {
+        for (int i = a.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() > a[i]) {
                 stack.pop();
             }
-            if(stack.isEmpty())
+            if (stack.isEmpty())
                 Log.d(TAG, "Next Smaller Element: of " + a[i] + " is:" + -1);
             else
                 Log.d(TAG, "Next Smaller Element: of " + a[i] + " is:" + stack.peek());

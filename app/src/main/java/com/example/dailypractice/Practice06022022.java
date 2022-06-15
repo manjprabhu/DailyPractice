@@ -13,7 +13,7 @@ public class Practice06022022 {
         int arr[] = {10, 3, 6, 21, 656, 2, 4, 1, 8, 11};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = arr.length - 1; i >= 0; i-- ) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() > arr[i]) {
                 stack.pop();
             }
@@ -30,7 +30,7 @@ public class Practice06022022 {
         int arr[] = {10, 3, 6, 21, 656, 2, 4, 1, 8, 11};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = 0; i < arr.length; i++ ) {
+        for (int i = 0; i < arr.length; i++) {
             while (!stack.isEmpty() && stack.peek() < arr[i]) {
                 stack.pop();
             }
@@ -47,7 +47,7 @@ public class Practice06022022 {
         int arr[] = {10, 3, 6, 21, 656, 2, 4, 1, 8, 11};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = arr.length - 1; i >= 0; i-- ) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() < arr[i]) {
                 stack.pop();
             }
@@ -64,7 +64,7 @@ public class Practice06022022 {
         int arr[] = {10, 3, 6, 21, 656, 2, 4, 1, 8, 11};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = 0; i < arr.length - 1; i++ ) {
+        for (int i = 0; i < arr.length - 1; i++) {
             while (!stack.isEmpty() && stack.peek() > arr[i]) {
                 stack.pop();
             }
@@ -81,10 +81,10 @@ public class Practice06022022 {
 
         int arr[] = {10, 3, 6, 21, 656, 2, 4, 1, 8, 11};
 
-        for ( int i = 0; i < arr.length; i++ ) {
+        for (int i = 0; i < arr.length; i++) {
             int min_index = i;
 
-            for ( int j = i + 1; j < arr.length; j++ ) {
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[min_index]) {
                     min_index = j;
                 }
@@ -98,7 +98,7 @@ public class Practice06022022 {
 
         }
 
-        for ( int k = 0; k < arr.length; k++ ) {
+        for (int k = 0; k < arr.length; k++) {
             Log.d(TAG, "selectionSort: " + arr[k]);
         }
     }
@@ -106,9 +106,9 @@ public class Practice06022022 {
     void bubbleSort() {
         int a[] = {9, 32, -1, 5, 1, 8, 22, 16, 9, -9};
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
 
-            for ( int j = 0; j < a.length - 1 - i; j++ ) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
                 if (a[j] > a[j + 1]) {
                     int temp = a[j];
                     a[j] = a[j + 1];
@@ -117,7 +117,7 @@ public class Practice06022022 {
             }
         }
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "bubbleSort: " + a[k]);
         }
     }
@@ -125,7 +125,7 @@ public class Practice06022022 {
     void insertionSort() {
         int a[] = {9, 32, -1, 5, 1, 8, 22, 16, 9, -9};
 
-        for ( int i = 1; i < a.length; i++ ) {
+        for (int i = 1; i < a.length; i++) {
             int key = a[i];
             int j = i - 1;
 
@@ -135,7 +135,7 @@ public class Practice06022022 {
             }
             a[j + 1] = key;
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "insertionSort: " + a[k]);
         }
     }
@@ -147,7 +147,7 @@ public class Practice06022022 {
 
         quickSort(low, high, a);
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "StartQuickSort: " + a[k]);
         }
 
@@ -283,7 +283,7 @@ public class Practice06022022 {
         int i = 0;
         int j = 1;
 
-        for ( int k = 0; k < n; k++ ) {
+        for (int k = 0; k < n; k++) {
             int x = fRecursion(k);
             Log.d(TAG, "fibbonaciRecursive: :" + x);
         }

@@ -17,7 +17,7 @@ public class Practice17022022 {
 
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             while (!stack.isEmpty() && stack.peek() > a[i]) {
                 stack.pop();
             }
@@ -34,7 +34,7 @@ public class Practice17022022 {
         int a[] = {10, 3, 7, 22, 32, 6, -9, 7, 15, -4, 13};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             while (!stack.isEmpty() && stack.peek() < a[i]) {
                 stack.pop();
             }
@@ -51,7 +51,7 @@ public class Practice17022022 {
         int a[] = {10, 3, 7, 22, 32, 6, -9, 7, 15, -4, 13};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = a.length - 1; i >= 0; i-- ) {
+        for (int i = a.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() < a[i]) {
                 stack.pop();
             }
@@ -68,7 +68,7 @@ public class Practice17022022 {
         int a[] = {10, 3, 7, 22, 32, 6, -9, 7, 15, -4, 13};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = a.length - 1; i >= 0; i-- ) {
+        for (int i = a.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() > a[i]) {
                 stack.pop();
             }
@@ -87,10 +87,10 @@ public class Practice17022022 {
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         int k = 4;
 
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() > a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -104,10 +104,10 @@ public class Practice17022022 {
         PriorityQueue<Integer> queue = new PriorityQueue<>();
 
         int k = 4;
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() < a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -120,15 +120,15 @@ public class Practice17022022 {
         int a[] = {-7, 1, 5, 2, -4, 3};
 
         int leftSum, rightSum;
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             leftSum = 0;
             rightSum = 0;
 
-            for ( int j = 0; j < i; j++ ) {
+            for (int j = 0; j < i; j++) {
                 leftSum = leftSum + a[j];
             }
 
-            for ( int j = i + 1; j < a.length; j++ ) {
+            for (int j = i + 1; j < a.length; j++) {
                 rightSum = rightSum + a[j];
             }
 
@@ -142,11 +142,11 @@ public class Practice17022022 {
         int a[] = {-7, 1, 5, 2, -4, 3};
         int sum = 0, leftSUm = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             sum = sum + a[i];
         }
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             sum = sum - a[i];
 
             if (sum == leftSUm) {
@@ -177,7 +177,7 @@ public class Practice17022022 {
         int n = 10;
 
 
-        for ( int i = 0; i < n; i++ ) {
+        for (int i = 0; i < n; i++) {
             int num = recursion(i);
             Log.d(TAG, "fibonacciRecusrion: " + num);
         }
@@ -217,7 +217,7 @@ public class Practice17022022 {
 
         HashSet<Integer> set = new HashSet<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             sum = sum + a[i];
             if (a[i] == 0 || sum == 0 || set.contains(sum)) {
                 Log.d(TAG, "There exists a zero sum subarray ");
@@ -233,7 +233,7 @@ public class Practice17022022 {
         int cursum = 0;
         int maxsum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             cursum = cursum + a[i];
 
             if (cursum > maxsum) {
@@ -257,7 +257,7 @@ public class Practice17022022 {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             curSum = curSum + a[i];// calculate the prefix sum
 
             if (map.containsKey(curSum - sum)) {
@@ -283,7 +283,7 @@ public class Practice17022022 {
         int high = a.length - 1;
 
         quickSort(low, high, a);
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "startQuickSort: " + a[k]);
         }
 
@@ -326,9 +326,9 @@ public class Practice17022022 {
     void selectionSort() {
         int a[] = {10, 3, 7, 22, 32, 6, -9, 15, -4, 13};
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             int index = i;
-            for ( int j = i + 1; j < a.length; j++ ) {
+            for (int j = i + 1; j < a.length; j++) {
                 if (a[j] < a[index])
                     index = j;
             }
@@ -338,7 +338,7 @@ public class Practice17022022 {
                 a[index] = temp;
             }
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "selectionSort: " + a[k]);
         }
     }
@@ -346,7 +346,7 @@ public class Practice17022022 {
     void insertionSort() {
         int a[] = {10, 3, 7, 22, 32, 6, -9, 15, -4, 13};
 
-        for ( int i = 1; i < a.length; i++ ) {
+        for (int i = 1; i < a.length; i++) {
             int key = a[i];
             int j = i - 1;
 
@@ -356,7 +356,7 @@ public class Practice17022022 {
             }
             a[j + 1] = key;
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "insertionSort: " + a[k]);
         }
     }
@@ -370,7 +370,7 @@ public class Practice17022022 {
         HashMap<Integer, Integer> map = new HashMap<>();
         int cursum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             cursum = cursum + a[i];
 
             if (map.containsKey(cursum - sum)) {

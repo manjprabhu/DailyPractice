@@ -38,12 +38,12 @@ public class Practice19022022 {
         int d = 1;
 
         int temp = a[0];
-        for ( int i = 0; i < a.length - 1; i++ ) {
+        for (int i = 0; i < a.length - 1; i++) {
             a[i] = a[i + 1];
         }
         a[a.length - 1] = temp;
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "arrayRotationSolution1: " + a[k]);
         }
 
@@ -54,12 +54,12 @@ public class Practice19022022 {
         int d = 1;
         int temp = a[a.length - 1];
 
-        for ( int i = a.length - 1; i > 0; i-- ) {
+        for (int i = a.length - 1; i > 0; i--) {
             a[i] = a[i - 1];
         }
         a[0] = temp;
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "arrayRotationSolution1: " + a[k]);
         }
     }
@@ -77,7 +77,7 @@ public class Practice19022022 {
             return;
         }
 
-        for ( int i = 1; i < a.length - 2; i++ ) {
+        for (int i = 1; i < a.length - 2; i++) {
             if (a[i] > a[i - 1] && a[i] > a[i + 1])
                 Log.d(TAG, "peakElement: " + a[i]);
         }
@@ -111,7 +111,7 @@ public class Practice19022022 {
         int cursum = 0;
         int maxsum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             cursum = cursum + a[i];
             if (cursum > maxsum) {
                 maxsum = cursum;
@@ -126,20 +126,20 @@ public class Practice19022022 {
     void equilibriumIndexSolution1() {
         int a[] = {-7, 1, 5, 2, -4, 3};
 
-        int leftsum =0;
-        int rightSum =0;
+        int leftsum = 0;
+        int rightSum = 0;
 
-        for(int i=0;i<a.length;i++) {
+        for (int i = 0; i < a.length; i++) {
 
-            leftsum =0;
-            rightSum =0;
+            leftsum = 0;
+            rightSum = 0;
 
-            for(int j=0;i<i;j++) {
-                leftsum = leftsum +a[i];
+            for (int j = 0; i < i; j++) {
+                leftsum = leftsum + a[i];
             }
 
-            for(int k=i+1;k<a.length;k++) {
-                rightSum = rightSum +a[i];
+            for (int k = i + 1; k < a.length; k++) {
+                rightSum = rightSum + a[i];
             }
         }
     }

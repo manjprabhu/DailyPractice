@@ -62,7 +62,7 @@ public class Practice09022022 {
     void insertionSort() {
         int a[] = {19, 2, 65, 12, -2, -45, 78, 23, 8, 91, 9};
 
-        for ( int i = 1; i < a.length; i++ ) {
+        for (int i = 1; i < a.length; i++) {
             int key = a[i];
             int j = i - 1;
 
@@ -73,15 +73,15 @@ public class Practice09022022 {
             a[j + 1] = key;
         }
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "insertionSort: " + a[k]);
         }
     }
 
     void bubbleSort() {
         int a[] = {19, 2, 65, 12, -2, -45, 78, 23, 8, 91, 9};
-        for ( int i = 0; i < a.length; i++ ) {
-            for ( int j = 0; j < a.length - i - 1; j++ ) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
                 if (a[j] < a[j + 1]) {
                     int temp = a[j];
                     a[j] = a[j + 1];
@@ -89,7 +89,7 @@ public class Practice09022022 {
                 }
             }
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "bubbleSort: " + a[k]);
         }
     }
@@ -97,10 +97,10 @@ public class Practice09022022 {
     void selectionSort() {
         int a[] = {19, 2, 65, 12, -2, -45, 78, 23, 8, 91, 9};
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             int min_index = i;
 
-            for ( int j = i; j < a.length; j++ ) {
+            for (int j = i; j < a.length; j++) {
                 if (a[j] < a[min_index]) {
                     min_index = j;
                 }
@@ -111,7 +111,7 @@ public class Practice09022022 {
                 a[i] = temp;
             }
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "selectionSort: " + a[k]);
         }
     }
@@ -145,10 +145,10 @@ public class Practice09022022 {
         int k = 2;
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int j = k; j < a.length; j++ ) {
+        for (int j = k; j < a.length; j++) {
             if (queue.peek() > a[j]) {
                 queue.poll();
                 queue.add(a[j]);
@@ -162,11 +162,11 @@ public class Practice09022022 {
         int k = 5;
 
         PriorityQueue<Integer> queue = new PriorityQueue<>();
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
 
-        for ( int j = k; j < a.length; j++ ) {
+        for (int j = k; j < a.length; j++) {
             if (queue.peek() < a[j]) {
                 queue.poll();
                 queue.add(a[j]);
@@ -180,7 +180,7 @@ public class Practice09022022 {
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             if (a[i] > largest) {
                 secondLargest = largest;
                 largest = a[i];
@@ -197,7 +197,7 @@ public class Practice09022022 {
         int maxSum = 0;
         int curSum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             curSum = curSum + a[i];
             if (curSum > maxSum) {
                 maxSum = curSum;
@@ -216,7 +216,7 @@ public class Practice09022022 {
         int high = a.length - 1;
 
         quicksort(low, high, a);
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "startQuickSort: " + a[k]);
         }
 
@@ -264,7 +264,7 @@ public class Practice09022022 {
 
         mergesort(l, r, a);
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             Log.d(TAG, "startMergeSort: " + a[i]);
         }
 
@@ -311,7 +311,7 @@ public class Practice09022022 {
             }
         }
 
-        for ( int m = l; m <= r; m++ ) {
+        for (int m = l; m <= r; m++) {
             a[m] = b[m];
         }
     }
@@ -319,8 +319,8 @@ public class Practice09022022 {
     void firstRepeatingElementInArray() {
         int a[] = {10, 4, 5, 3, 4, 4, 3, 5, 6};
 
-        for ( int i = 0; i < a.length; i++ ) {
-            for ( int j = 0; j < a.length; j++ ) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
                 if (a[i] == a[j] && i != j) {
                     Log.d("Practice10022022", "Solution1 firstRepeatingElementInArray: is " + a[i]);
                     return;
@@ -333,7 +333,7 @@ public class Practice09022022 {
         int a[] = {10, 4, 5, 3, 4, 4, 3, 5, 6};
         HashSet<Integer> set = new HashSet<>();
         int min = 0;
-        for ( int i = a.length - 1; i >= 0; i-- ) {
+        for (int i = a.length - 1; i >= 0; i--) {
 
             if (set.contains(a[i])) {
                 min = i;
@@ -352,8 +352,8 @@ public class Practice09022022 {
     void firstNONRepeatedElement() {
         int a[] = {9, 4, 9, 6, 7, 4};
 
-        for ( int i = 0; i < a.length; i++ ) {
-            for ( int j = 0; j < a.length; j++ ) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
 
                 if (i != j && a[i] == a[j]) {
                     break;
@@ -368,8 +368,8 @@ public class Practice09022022 {
 
     void firstRepeatedCharString() {
         String str = "hello geeks";
-        for ( int i = 0; i < str.length(); i++ ) {
-            for ( int j = 0; j < str.length(); j++ ) {
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < str.length(); j++) {
                 if (i != j && str.charAt(i) == str.charAt(j)) {
                     Log.d(TAG, "firstRepeatedCharString: is:" + str.charAt(i));
                     return;
@@ -381,13 +381,12 @@ public class Practice09022022 {
     void firstRepeatedCharStringSolution2() {
         String str = "hello geeks";
         HashSet<Character> set = new HashSet<>();
-        for(int i=0;i<str.length();i++) {
+        for (int i = 0; i < str.length(); i++) {
 
-            if(set.contains(str.charAt(i))) {
-                Log.d(TAG, "firstRepeatedCharStringSolution2: "+str.charAt(i));
+            if (set.contains(str.charAt(i))) {
+                Log.d(TAG, "firstRepeatedCharStringSolution2: " + str.charAt(i));
                 return;
-            }
-            else
+            } else
                 set.add(str.charAt(i));
         }
     }
@@ -398,8 +397,8 @@ public class Practice09022022 {
     void checkForStringRotation() {
         String str1 = "ABCD";
         String str2 = "ACBD";
-        
-        if(str1.length() == str2.length() && (str1+str1).contains(str2)) {
+
+        if (str1.length() == str2.length() && (str1 + str1).contains(str2)) {
             Log.d(TAG, "checkForStringRotation: is TURE");
         } else {
             Log.d(TAG, "checkForStringRotation: not Rotated");
@@ -407,13 +406,13 @@ public class Practice09022022 {
     }
 
     void determineStringHasUniqueChar() {
-        String str =  "abcde";
+        String str = "abcde";
 
         HashSet<Character> set = new HashSet<>();
 
-        for(int i=0;i<str.length();i++) {
+        for (int i = 0; i < str.length(); i++) {
 
-            if(!set.add(str.charAt(i))) {
+            if (!set.add(str.charAt(i))) {
                 Log.d(TAG, "String has repeated char: ");
                 return;
             } else {
@@ -433,21 +432,21 @@ public class Practice09022022 {
         int count[] = new int[256];
 
         int len = str.length();
-        for (int i=0; i<len; i++)
+        for (int i = 0; i < len; i++)
             count[str.charAt(i)]++;
 
         int max = -1;
         char result = ' ';
 
         for (int i = 0; i < len; i++) {
-            Log.d(TAG, "Occurrence of char: "+str.charAt(i) + " is :"+ count[str.charAt(i)]);
+            Log.d(TAG, "Occurrence of char: " + str.charAt(i) + " is :" + count[str.charAt(i)]);
             if (max < count[str.charAt(i)]) {
                 max = count[str.charAt(i)];
                 result = str.charAt(i);
 
             }
         }
-        Log.d(TAG, "maxOccuringCharString: "+result);
+        Log.d(TAG, "maxOccuringCharString: " + result);
     }
 
     void frequencyOfChar() {
@@ -455,12 +454,12 @@ public class Practice09022022 {
 
         int count[] = new int[256];
 
-        for(int i=0;i<str.length();i++) {
+        for (int i = 0; i < str.length(); i++) {
             count[str.charAt(i)]++;
         }
 
-        for(int i=0;i<str.length();i++) {
-            Log.d(TAG, "Frequency of Char: "+ str.charAt(i) + " is :"+ count[str.charAt(i)]);
+        for (int i = 0; i < str.length(); i++) {
+            Log.d(TAG, "Frequency of Char: " + str.charAt(i) + " is :" + count[str.charAt(i)]);
         }
     }
 

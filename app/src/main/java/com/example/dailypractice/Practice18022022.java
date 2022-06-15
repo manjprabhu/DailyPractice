@@ -16,8 +16,8 @@ public class Practice18022022 {
     void bubbleSort() {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
 
-        for ( int i = 0; i < a.length; i++ ) {
-            for ( int j = 0; j < a.length - i - 1; j++ ) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
                 if (a[j] > a[j + 1]) {
                     int temp = a[j];
                     a[j] = a[j + 1];
@@ -25,7 +25,7 @@ public class Practice18022022 {
                 }
             }
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "bubbleSort: " + a[k]);
         }
     }
@@ -34,7 +34,7 @@ public class Practice18022022 {
         int[] a = {-5, 4, 6, -3, 4, -1};
         int cursum = 0, maxsum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             cursum = cursum + a[i];
             if (cursum > maxsum)
                 maxsum = cursum;
@@ -48,10 +48,10 @@ public class Practice18022022 {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         int k = 3;
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() > a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -64,10 +64,10 @@ public class Practice18022022 {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         int k = 4;
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() < a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -79,10 +79,10 @@ public class Practice18022022 {
     void selectionSort() {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             int minindex = i;
 
-            for ( int j = i; j < a.length; j++ ) {
+            for (int j = i; j < a.length; j++) {
                 if (a[j] < a[minindex])
                     minindex = j;
             }
@@ -92,7 +92,7 @@ public class Practice18022022 {
                 a[i] = temp;
             }
         }
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "selectionSort: " + a[k]);
         }
     }
@@ -100,7 +100,7 @@ public class Practice18022022 {
     void insertionSort() {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
 
-        for ( int i = 1; i < a.length; i++ ) {
+        for (int i = 1; i < a.length; i++) {
             int key = a[i];
             int j = i - 1;
             while (j >= 0 && a[j] > key) {
@@ -110,7 +110,7 @@ public class Practice18022022 {
             a[j + 1] = key;
         }
 
-        for ( int k = 0; k < a.length; k++ ) {
+        for (int k = 0; k < a.length; k++) {
             Log.d(TAG, "insertionSort: " + a[k]);
         }
     }
@@ -119,7 +119,7 @@ public class Practice18022022 {
         int a[] = {9, -2, 8, 11, 6, -9, 78, 4, 17, 32};
         Stack<Integer> stack = new Stack<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             while (!stack.isEmpty() && stack.peek() > a[i]) {
                 stack.pop();
             }
@@ -166,7 +166,7 @@ public class Practice18022022 {
 
     void fibonacciRecursion() {
         int n = 10;
-        for ( int i = 0; i < n; i++ ) {
+        for (int i = 0; i < n; i++) {
             Log.d(TAG, "fibonacciRecursion: " + recursion(i));
         }
     }
@@ -183,7 +183,7 @@ public class Practice18022022 {
         String str = " hello this is testing string";
         String a[] = str.split(" ");
         String resumt = "";
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             resumt = " " + a[i] + resumt;
         }
         Log.d(TAG, "reverseWord: " + resumt);
@@ -205,8 +205,8 @@ public class Practice18022022 {
     void pairWithGivenSum() {
         int a[] = {10, 5, -15, 13, 20, 15, 12};
         int sum = 25;
-        for ( int i = 0; i < a.length - 1; i++ ) {
-            for ( int j = i + 1; j < a.length; j++ ) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = i + 1; j < a.length; j++) {
                 if (a[i] + a[j] == sum) {
                     Log.d(TAG, "pairWithGivenSum: (" + a[i] + "," + a[j] + ")");
                 }
@@ -242,7 +242,7 @@ public class Practice18022022 {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
 
             if (map.containsKey(sum - a[i])) {
                 Log.d(TAG, "pairWithGivenSum solution3: (" + a[i] + "," + a[map.get(sum - a[i])] + ")");
@@ -256,7 +256,7 @@ public class Practice18022022 {
         int sum = 0;
 
         HashSet<Integer> set = new HashSet<>();
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
 
             sum = sum + a[i];
             if (a[i] == 0 || sum == 0 || set.contains(sum)) {

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         practice13022022.head.next.next.next.next.next = practice13022022.head;//to make list circualr
         practice13022022.checkforcircularList();*/
 
-        Practice19022022 practice19022022 = new Practice19022022();
-        practice19022022.maxSumSubArrayKadensAlgo();
+        Practice15062022 practice15062022 = new Practice15062022();
+        practice15062022.selectionSort();
     }
 }
