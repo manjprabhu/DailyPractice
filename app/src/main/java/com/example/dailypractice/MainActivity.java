@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
         practice13022022.checkforcircularList();*/
 
         Practice16062022 practice16062022 = new Practice16062022();
-        practice16062022.iterativeBinarySearch();
+        practice16062022.bubbleSort();
     }
 }
