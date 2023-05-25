@@ -125,15 +125,12 @@ public class Practice18052023 {
 
         for (int i = 0; i < a.length; i++) {
             curSum = curSum + a[i];
-
             if (curSum > maxSum)
                 maxSum = curSum;
 
             if (curSum < 0)
                 curSum = 0;
-
         }
-
         Log.d(TAG, "Max sum subarray Kadens: " + maxSum);
     }
 }
