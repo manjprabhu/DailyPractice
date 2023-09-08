@@ -54,7 +54,7 @@ public class Practice16022022 {
     void fibonacciRecursion() {
         int n = 10;
 
-        for ( int i = 0; i < n; i++ ) {
+        for (int i = 0; i < n; i++) {
             int x = recursion(i);
             Log.d(TAG, "fibonacciRecursion: " + x);
         }
@@ -102,7 +102,7 @@ public class Practice16022022 {
         String str = " hello this is for testing purpose";
         String s[] = str.split(" ");
         String result = "";
-        for ( int i = 0; i < s.length; i++ ) {
+        for (int i = 0; i < s.length; i++) {
             result = " " + s[i] + result;
         }
         Log.d(TAG, "reverseword: " + result);
@@ -113,15 +113,15 @@ public class Practice16022022 {
         int leftSum = 0;
         int rightSum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
 
             leftSum = 0;
             rightSum = 0;
-            for ( int j = 0; j < i; j++ ) {
+            for (int j = 0; j < i; j++) {
                 leftSum = leftSum + a[j];
             }
 
-            for ( int k = i + 1; k < a.length; k++ ) {
+            for (int k = i + 1; k < a.length; k++) {
                 rightSum = rightSum + a[k];
             }
             if (leftSum == rightSum) {
@@ -132,14 +132,14 @@ public class Practice16022022 {
     }
 
     void equilibriumIndexSolution2() {
-        int a[] = {-7, 1, 5, 2, -4, 3, 0};
+        int[] a = {-7, 1, 5, 2, -4, 3, 0};
         int sum = 0;
         int leftSum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
-            sum = sum + a[i];
+        for (int j : a) {
+            sum = sum + j;
         }
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
             sum = sum - a[i];
 
             if (sum == leftSum) {
@@ -153,8 +153,8 @@ public class Practice16022022 {
     void prefixSumArray() {
         int a[] = {-7, 1, 5, 2, -4, 3, 0};
         int pSum = 0;
-        for ( int i = 0; i < a.length; i++ ) {
-            pSum = pSum + a[i];
+        for (int j : a) {
+            pSum = pSum + j;
             Log.d(TAG, "prefixSumArray: " + pSum);
         }
     }
@@ -164,9 +164,9 @@ public class Practice16022022 {
         int sum = 0;
         HashSet<Integer> set = new HashSet<>();
 
-        for ( int i = 0; i < a.length; i++ ) {
-            sum = sum + a[i];
-            if (a[i] == 0 || sum == 0 || set.contains(sum)) {
+        for (int j : a) {
+            sum = sum + j;
+            if (j == 0 || sum == 0 || set.contains(sum)) {
                 Log.d(TAG, "Zero sum subarray is present: ");
                 break;
             }
@@ -175,14 +175,14 @@ public class Practice16022022 {
     }
 
     void kthSmallestElement() {
-        int a[] = {1, 5, 7, 9, 12, -4, -8};
+        int[] a = {1, 5, 7, 9, 12, -4, -8};
 
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         int k = 2;
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() > a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -192,14 +192,14 @@ public class Practice16022022 {
     }
 
     void kthLargestElement() {
-        int a[] = {1, 15, 7, 9, 12, -4, -8};
+        int[] a = {1, 15, 7, 9, 12, -4, -8};
         int k = 3;
 
         PriorityQueue<Integer> queue = new PriorityQueue<>();
-        for ( int i = 0; i < k; i++ ) {
+        for (int i = 0; i < k; i++) {
             queue.add(a[i]);
         }
-        for ( int i = k; i < a.length; i++ ) {
+        for (int i = k; i < a.length; i++) {
             if (queue.peek() < a[i]) {
                 queue.poll();
                 queue.add(a[i]);
@@ -210,19 +210,19 @@ public class Practice16022022 {
 
 
     void frequencyOfElement() {
-        int a[] = {10, 4, 7, 12, 45, 23, 12, 45, 23, 78, 89, 12, 23};
+        int[] a = {10, 4, 7, 12, 45, 23, 12, 45, 23, 78, 89, 12, 23};
         HashMap<Integer, Integer> map = new HashMap<>();
         int count;
-        for ( int i = 0; i < a.length; i++ ) {
-            if (map.containsKey(a[i])) {
-                count = map.get(a[i]);
+        for (int j : a) {
+            if (map.containsKey(j)) {
+                count = map.get(j);
                 count++;
-                map.put(a[i], count);
+                map.put(j, count);
             } else {
-                map.put(a[i], 1);
+                map.put(j, 1);
             }
         }
-        for ( Map.Entry entry : map.entrySet() ) {
+        for (Map.Entry entry : map.entrySet()) {
             Log.d(TAG, "Element " + entry.getKey() + " Appears " + entry.getValue() + " times");
         }
     }
@@ -230,13 +230,13 @@ public class Practice16022022 {
     void frequencyofChar() {
         String str = "abcdefghacbde";
 
-        int count[] = new int[256];
+        int[] count = new int[256];
 
-        for ( int i = 0; i < str.length(); i++ ) {
+        for (int i = 0; i < str.length(); i++) {
             count[str.charAt(i)]++;
         }
 
-        for ( int i = 0; i < str.length(); i++ ) {
+        for (int i = 0; i < str.length(); i++) {
             Log.d(TAG, "Character " + str.charAt(i) + " Appears " + count[str.charAt(i)] + " times");
         }
     }
@@ -245,7 +245,7 @@ public class Practice16022022 {
         String str = "abcdacfgadfeAaers";
         char c = 'a';
         int count = 0;
-        for ( int i = 0; i < str.length(); i++ ) {
+        for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == 'a' || str.charAt(i) == 'A') {
                 count++;
             }
@@ -258,7 +258,7 @@ public class Practice16022022 {
 
         HashSet<Character> set = new HashSet<>();
 
-        for ( int i = 0; i < str.length(); i++ ) {
+        for (int i = 0; i < str.length(); i++) {
             if (!set.add(str.charAt(i))) {
                 Log.d(TAG, "firstRepeatedChar is:" + str.charAt(i));
                 break;
@@ -273,8 +273,8 @@ public class Practice16022022 {
         int sum = 0;
         int cursum = 0;
 
-        for ( int i = 0; i < a.length; i++ ) {
-            cursum = cursum + a[i];
+        for (int j : a) {
+            cursum = cursum + j;
             if (cursum > sum) {
                 sum = cursum;
             }
@@ -289,8 +289,8 @@ public class Practice16022022 {
         int a[] = {10, 5, -15, 13, 20, 15, 12};
         int sum = 25;
 
-        for ( int i = 0; i < a.length - 1; i++ ) {
-            for ( int j = i + 1; j < a.length; j++ ) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = i + 1; j < a.length; j++) {
                 if (a[i] + a[j] == sum) {
                     Log.d(TAG, "pairWithGivenSum: " + a[i] + " And " + a[j]);
                 }
@@ -324,7 +324,7 @@ public class Practice16022022 {
         int a[] = {10, 5, -15, 13, 20, 15, 12};
         int sum = 25;
         HashMap<Integer, Integer> map = new HashMap<>();
-        for ( int i = 0; i < a.length; i++ ) {
+        for (int i = 0; i < a.length; i++) {
 
             if (map.containsKey(sum - a[i])) {
                 Log.d(TAG, "Pair with given sum: " + a[i] + " And " + a[map.get(sum - a[i])]);
@@ -336,16 +336,16 @@ public class Practice16022022 {
     void countPairWithGivenSumSolution4() {
         int a[] = {10, 5, -15, 13, 20, 15, 12};
         int sum = 25;
-        int count =0;
+        int count = 0;
         HashSet<Integer> set = new HashSet<>();
 
-        for(int i=0;i<a.length;i++) {
-            if(set.contains(sum -a[i])) {
-               count++;
+        for (int i = 0; i < a.length; i++) {
+            if (set.contains(sum - a[i])) {
+                count++;
             }
             set.add(a[i]);
         }
-        Log.d(TAG, "countPairWithGivenSumSolution4: "+count);
+        Log.d(TAG, "countPairWithGivenSumSolution4: " + count);
     }
 
 }
